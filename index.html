@@ -13,7 +13,6 @@
     <style>
         .jumbotron {
             margin: 50px;
-            /* padding: 90px; */
         }
     </style>
 </head>
@@ -60,6 +59,7 @@
                     <button id="btn-convert" class="btn btn-primary">Converter</button>
                 </div>
             </div>
+            <label for="">Result:</label>
             <p id="result"></p>
         </div>
     </div>
@@ -67,7 +67,7 @@
     <!-- Service Worker Registration -->
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/Currency-Converter/sw.js', { scope: '/Currency-Converter/' })
+            navigator.serviceWorker.register('/sw.js', { scope: '/' })
                 .then(function (reg) {
                     // registration worked
                     console.log('Registration succeeded. Scope is ' + reg.scope);
