@@ -1,2 +1,2 @@
 # Currency-Converter
-Currency Converter that works online or offline
+Currency Converter that works online and offline
