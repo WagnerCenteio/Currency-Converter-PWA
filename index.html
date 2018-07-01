@@ -67,7 +67,7 @@
     <!-- Service Worker Registration -->
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js', { scope: './' })
+            navigator.serviceWorker.register('/Currency-Converter/sw.js', { scope: '/Currency-Converter/' })
                 .then(function (reg) {
                     // registration worked
                     console.log('Registration succeeded. Scope is ' + reg.scope);
