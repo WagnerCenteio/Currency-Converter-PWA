@@ -1,0 +1,22 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: url("assets/Endless-Constellation.svg");
+}
+
+.goku-avatar {
+  position: absolute;
+  left: 10%;
+  top: 15%;
+}
+
+.container{
+    position: absolute;
+    left: 45%;
+    top: 30%;
+    padding: 5%;
+    color: skyblue;
+    border: dashed;
+}
