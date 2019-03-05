@@ -12,11 +12,11 @@ body {
   top: 15%;
 }
 
-.container{
-    position: absolute;
-    left: 45%;
-    top: 30%;
-    padding: 5%;
-    color: skyblue;
-    border: dashed;
+.container {
+  position: absolute;
+  left: 45%;
+  top: 30%;
+  padding: 5%;
+  color: skyblue;
+  border: dashed;
 }

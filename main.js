@@ -15,13 +15,16 @@ if ("serviceWorker" in navigator) {
 
 // ---------- get all countries
 
-fetch("https://free.currencyconverterapi.com/api/v5/countries")
+fetch(
+  "https://free.currencyconverterapi.com/api/v6/countries?apiKey=8672833b8ea62b3de2ab"
+)
   .then(response => response.json())
   .then(response => {});
-  
-// ---------- get all currencies
 
-fetch("https://free.currencyconverterapi.com/api/v5/currencies")
+// ---------- get all currencies
+fetch(
+  "https://free.currencyconverterapi.com/api/v6/currencies?apiKey=8672833b8ea62b3de2ab"
+)
   .then(response => response.json())
   .then(response => {
     const originSelect = document.getElementById("origin-currency-sel");
@@ -44,7 +47,7 @@ fetch("https://free.currencyconverterapi.com/api/v5/currencies")
       destenySelect.appendChild(option);
     });
   });
-  
+
 const btnConvert = document.getElementById("btn-convert");
 btnConvert.addEventListener("click", () => {
   const source = document.getElementById("origin-currency-sel");
@@ -53,7 +56,7 @@ btnConvert.addEventListener("click", () => {
   const targetVal = target.options[target.selectedIndex].value;
   // ---------- get  compact currency
   fetch(
-    `https://free.currencyconverterapi.com/api/v5/convert?q=${sourceVal}_${targetVal}&compact=y`
+    `https://free.currencyconverterapi.com/api/v6/convert?q=${sourceVal}_${targetVal}&compact=y&apiKey=8672833b8ea62b3de2ab`
   )
     .then(response => response.json())
     .then(response => {
