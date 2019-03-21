@@ -17,17 +17,18 @@ self.addEventListener("install", event =>
 );
 
 // ----- Hijacking fetch requests
-// self.addEventListener("fetch", event => {
-//   const requestUrl = new URL(event.request.url);
-
-//   if (requestUrl.origin === location.origin) {
-//     event.respondWith(caches.match("/"));
-//     return;
-//   }
-
-//   event.respondWith(
-//     caches
-//       .match(event.request)
-//       .then(response => response || fetch(event.request))
-//   );
-// });
+self.addEventListener("fetch", event => {
+  alert();
+  const requestUrl = new URL(event.request.url);
+  if (requestUrl.origin === location.origin) {
+    if (requestUrl.pathname === "/") {
+      event.respondWith(caches.match("/"));
+      return;
+    }
+  }
+  event.respondWith(
+    caches
+      .match(event.request)
+      .then(response => response || fetch(event.request))
+  );
+});
